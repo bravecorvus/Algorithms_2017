@@ -163,6 +163,7 @@ main:
 	movq	%rax, -48(%rbp)
 	movl	$0, -20(%rbp)
 .L14:
+	! Outer Loop is in .L14
 	movl	-20(%rbp), %eax
 	cltq
 	cmpq	$3, %rax
@@ -173,6 +174,7 @@ main:
 	movl	%eax, -176(%rbp)
 	jmp	.L13
 .L12:
+	! Inner Loop is in .L14
 	movl	-176(%rbp), %edx
 	movl	-20(%rbp), %eax
 	cltq
