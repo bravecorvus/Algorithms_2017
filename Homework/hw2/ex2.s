@@ -18,4 +18,4 @@ main:
 	popq	%rbp
 	.cfi_def_cfa 7, 8
 	ret
-	.cfi_endproc
+	.cfi_endprocssss
