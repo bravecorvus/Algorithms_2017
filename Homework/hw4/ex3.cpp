@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    int n = 100;
+    int n = 1000;
     int x;
     start_timer();
     for ( int i = 0; i < n; ++i ) {
