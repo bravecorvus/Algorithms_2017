@@ -10,7 +10,6 @@ void recursion(int n) {
     }
     if (n > 0) {
         recursion(n/2);
-        recursion(n/2);
     }
 }
 
