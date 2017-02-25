@@ -1,0 +1,26 @@
+2. Reading Part II: please reach section 1.5 (universal hashing), and talk it over with your team. Feel free to consult other sources as well, on the general idea of hashing.
+
+3.[C] Describe the idea of hashing in your own words:
+
+Hashing on a list is the process of applying some algorithm on each element of strings in order to get a smaller and more convenient value called the hash, which is unique for each element of a list. Since the inverse hash function can be applied to a hash value to directly return a string result, this is more efficient than searching through a list trying to match a string with a string.
+
+
+What is a hash function, exactly?
+
+A hash function is a function that when applied to a list of elements, produces a map of fixed data that can decoded back to the original element.
+
+What are the properties you would like a hash function to have?
+
+Since the point of a hash is efficiency, you would want the function to be fairly quick and efficient for encoding new hashes, or decoding a hash to find the value.
+
+Why might arbitrarily chosen numbers be useful in the construction of an effective hash function?
+
+Since a very key use of hashing is in the field of cryptography, you need some level of randomness, or unpredictability so that hackers cannot easily reconstruct the decoding method for hash function encrypted data.
+
+Roughly speaking, how does universal hashing work?
+
+We randomly select a hash function from a predetermined set of applicable hash function families, and store up all the hash values of the desired data set. We want it to be random because 1) Randomness makes it unpredictable and harder to intercept by a adversary, and 2) To bring down the probability of collisions to a low number.
+
+4.[C] Build a sizzlingly fast spell checker by modifying SpellCheck.cpp, which is a slow spell checker. That is, design and implement some way to assign a small number of words per table entry, and have a quick way of accessing the relevant entry. When you are first building your spellchecker, it may help to have two very small text files that contain the words in the dictionary and the words to be checked, respectively. When you are ready for it, the file /usr/share/dict/words can be used as the dictionary, and /home/users/cs253/moby has the words from Moby Dick (thanks to project Gutenberg). Please use your git repository for this class to submit the C++ code for this project. Also please make links from your homework page to all relevant documents for your project, including the following:
+Some data showing how well spread out the dictionary words are in your hash table. That is, give the number of empty table entries, the number of entries with one word, with two words, etc. for the large dictionary file.
+Two measures of query efficiency: the average number of cycles needed to look up a word that is stored in the the dictionary, and the average number of cycles needed for a word that is not in the dictionary.
