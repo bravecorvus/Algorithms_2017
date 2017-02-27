@@ -1,35 +1,20 @@
-#include <typeinfo>
+
 #include<iostream>
 #include<fstream>
 #include<vector>
 using namespace std;
 #include"elapsed_time.h"
 
-int hashfunction(string arg) {
-    char b[arg.size()];
-    for(int i = 0; i < arg.size(); ++i) {
-        b[i] = arg[i];
-    }
-    int first = b[0];
-    int last = b[sizeof(b)/sizeof(char)-1];
-    int second;
-    if (sizeof(b)/sizeof(char) == 1) {
-        second = last;
-    } else {
-        second = b[1];
-    }
-    int modthis = 499;
-    return(second * (first+last)%modthis);
-}
-
 struct Dictionary {
   vector<string> wordArray;   // store the data
-  vector<string> *hasheddictionary;
+
+  vector<string>* dic; //
+
   Dictionary(const char *filename);  // constructor
 
   bool inWordArray(string &s);       // single query
-  void getWordsFromDictionary(const char *, vector<string>*);
   void check(const char *filename);  // multiple queries
+  void ana();
 };
 
 void getWords( const char *filename, vector<string> &vec )
@@ -43,37 +28,58 @@ void getWords( const char *filename, vector<string> &vec )
   while ( f >> s ) vec.push_back(s);
 }
 
-void getWordsFromDictionary( const char *filename,  vector<string> *hasheddictionary)
+int hashfunction(string arg) {//alg
+    /*char b[arg.size()];
+    for(int i = 0; i < arg.size(); ++i) {
+        b[i] = arg[i];
+    }
+    int first = b[0];
+    int last = b[sizeof(b)/sizeof(char)-1];
+    int second;
+
+    if (sizeof(b)/sizeof(char) == 1) {
+        second = last;
+    } else {
+        second = b[1];
+    }
+
+    int modthis = 479833;
+
+    return int((second *(first+last))%modthis);*/
+
+  int hash =0;
+  for(int i=0; i<arg.size();++i){
+    hash=(137*hash + arg[i])%479833;
+  }
+  return hash;
+}
+
+Dictionary::Dictionary( const char *filename )
 {
+  dic=new vector<string> [479833];
+
   ifstream f(filename);
   if ( ! f.good() ) {
     cerr << "Error:  unable to open " << filename << endl;
     exit(-1);
   }
   string s;
-  // while ( f >> s ) gethash()
-  while ( f >> s ) {
-    hasheddictionary[hashfunction(s)].push_back(s);
-    // cout << typeid((hasheddictionary[hashfunction(s)])).name() << endl;
+  
+  while ( f >> s ) dic[hashfunction(s)].push_back(s);//make a dictionry
+
+  //getWords(filename, wordArray);
+}
+
+bool Dictionary::inWordArray(string &s){
+  //int n = wordArray.size();
+    int index=hashfunction(s);
+    for(int n=0; n<(dic[index].size()); n++){
+      if(s==dic[index][n]){
+        return true;
+      }
+    }
+    return false;
   }
-}
-
-Dictionary::Dictionary( const char *filename )
-{
-  hasheddictionary = new vector <string> (500);
-  getWordsFromDictionary(filename, hasheddictionary);
-}
-
-bool Dictionary::inWordArray(string &s)
-{
-  int index = hashfunction(s);
-  int n = hasheddictionary[index].size();
-  for (int i = 0; i < n; ++i)
-    if ( s == hasheddictionary[index][i] ) return true;
-  return false;
-}
-
-
 
 void Dictionary::check( const char *filename )
 {
@@ -83,7 +89,7 @@ void Dictionary::check( const char *filename )
   start_timer();  // from elapsed_time.h
 
   int counter = 0, n = query.size();
-  for ( int i = 0; i < n; ++i ) {
+  for ( int i = 0; i < n; ++i ) { 
     if ( ! inWordArray(query[i]) ) {
       // cout << query[i] << " ";
       ++counter;
@@ -95,6 +101,27 @@ void Dictionary::check( const char *filename )
   cout << " Total cycles: " << cycles << endl;
 }
 
+void Dictionary::ana(){
+  int counter=0;
+  int max=0;
+  int min=600;
+  for(int n=0;n<479833;n++){
+    if(dic[n].size()!=0){
+      if(dic[n].size()>max){
+        max=dic[n].size();
+      }
+      if(dic[n].size()<min){
+        min=dic[n].size();
+      }
+    }
+    //cout<<"index"<<n<<" "<<dic[n].size()<<" "<<endl;
+  else
+    counter++;
+  }
+  cout<<"max "<<max<<endl;
+  cout<<"min "<<min<<endl;
+  cout<<"0 "<<counter<<endl;
+}
 int main(int argc, char **argv)
 {
   if ( argc != 3 ) {
@@ -103,4 +130,12 @@ int main(int argc, char **argv)
   }
   Dictionary d(argv[1]);
   d.check(argv[2]);
+  cout<<"checked"<<endl;
+  d.ana();
+
+
+
+
+
+
 }

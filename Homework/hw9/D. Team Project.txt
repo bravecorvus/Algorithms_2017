@@ -1,3 +1,32 @@
+C1)
+1.23. Show that if a has a multiplicative inverse mod N, then this inverse is unique (modulo N)
+Note that if there exists a multiplicative inverse x for a (mod N), then a*x ≡ 1(mod N).
+
+If a and N have a common factor of f, then all multiples of a are divisible by f., and a * Ny is a multiple of f for all y. Hence, the inverse does not exist.
+
+Then, if a is relatively prime to N, then using Euclids Ext. Alg. we can get integers x and y such that N * x + a * y = 1. Hence, b*y = 1.
+
+
+2)
+p = 17, q = 23, N = 391, e = 3.
+
+ϕ = (17 - 1)(23 - 1)
+ϕ  = 352
+3 * d mod 352 = 1.
+d = 235
+
+e(M) = 41^3 mod 391 = 105
+d(C) = 105^235 mod 391
+
+
+3) 1.28
+ϕ = (p - 1)(q - 1) = (7-1)(11-1) = 60
+e = integer greater than 2 and does not divide ϕ. = 7
+To get d, find correct relative prime d using extended Euiclid's algorithm such that 7 * d mod 60 = 1.
+d = 43
+7 * 32 mod 60 = 1.
+
+
 2. Reading Part II: please reach section 1.5 (universal hashing), and talk it over with your team. Feel free to consult other sources as well, on the general idea of hashing.
 
 3.[C] Describe the idea of hashing in your own words:
