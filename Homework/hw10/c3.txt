@@ -1,0 +1,20 @@
+Expanding T(n) = 3T(n/2) + cn
+<= 3T[3T(n/4) + cn/2] + 3cn/2 + cn
+<= 3T(3T[3T(n/8) + cn/4]) + 9cn/4 + 3cn/2 + cn
+<= 3T(3T(3T[3T(n/16) + cn/8])) + 27cn/8 + 9cn/4 + 3cn/2 + cn
+<= 3T(3T(3T(3T[3T(n/32) + cn/16]))) 81cn/16 + 27cn/8 + 9cn/4 + 3cn/2 + cn
+
+Hence, (3 ^ k)T(n/(2^k)) + (cn*(3^(k-1)))/(2^(k-1)) + cn... and all cn from from when k goes from k to 0, or more generally 2cn * (((3/2)^k) - 1)
+
+Now because we are still recurring n/2, the depth of this function will be log base 2 of n. Hence, k = log base 2 of n
+
+Plugging in k, 
+
+we get the open form (3 ^ (log base 2 (n)) * T(1)) + 2cn * (((3/2)^(log base 2 (n))) - 1)
+Hence, (n ^ (log base 2 (3))) * T(1) +  2cn*(((n^(log base 2(3)))/n^(log base 2(2)))-1)
+Hence, (n ^ (log base 2 (3))) * T(1) +  2cn*(n^(1.58))/(n^(1))
+Hence, (n ^ (log base 2 (3))) * T(1) +  2cn^0.58.
+
+Then T(n) <= (n ^ (log base 2(3)))O(1)
+		O(n^(log base 2(3)))
+

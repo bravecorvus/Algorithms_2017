@@ -28,25 +28,7 @@ void getWords( const char *filename, vector<string> &vec )
   while ( f >> s ) vec.push_back(s);
 }
 
-int hashfunction(string arg) {//alg
-    /*char b[arg.size()];
-    for(int i = 0; i < arg.size(); ++i) {
-        b[i] = arg[i];
-    }
-    int first = b[0];
-    int last = b[sizeof(b)/sizeof(char)-1];
-    int second;
-
-    if (sizeof(b)/sizeof(char) == 1) {
-        second = last;
-    } else {
-        second = b[1];
-    }
-
-    int modthis = 479833;
-
-    return int((second *(first+last))%modthis);*/
-
+int hashfunction(string &arg) {
   int hash =0;
   for(int i=0; i<arg.size();++i){
     hash=(137*hash + arg[i])%479833;

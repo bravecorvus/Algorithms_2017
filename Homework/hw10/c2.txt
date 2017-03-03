@@ -1,0 +1,7 @@
+Rewriting the log form k = log b(n) [where k is some real number], into exponent form, we get b ^ k = n.
+
+Now taking the ceiling of k, we get b ^ ceiling(k). First, we will assume the given form b ^ k = n. Then, since taking the ceiling of k will always make the statement b ^ ceiling(k) greater than or equal to b ^ k. Hence, When taking the ceiling of k, b ^ ceiling(k) > n.
+
+Next, seeing if it can get larger than n * b, we will go back to the form b ^ k = n. Looking at what would happen if you increased k in a linear fashion, n would have to grow at an exponential rate compared with k. Hence, taking b ^ ceiling(k) will always be smaller than or equal to b * n.
+
+Hence, for any positive integers n and any base b, there must be some power of b lying in the range [n, bn]

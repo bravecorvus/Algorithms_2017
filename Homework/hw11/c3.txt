@@ -1,0 +1,6 @@
+Even in the best case, since each leave on the tree is a unique permutation (1, 2, 3, 4, 5, ... n) , we will have at least n! leaves. Now taking the idea of how many comparisons it will take to get here, the basis (minimum number of leaves we can compare) is 2. Hense, our number of comparisons will be something like 2 ^ x. Since at minimum we will need to look through n! leaves, then n! <= 2^x comparisons. Hence, n!/2^x <= 1. Hence, 
+
+Even in the best case, you have to look through AT LEAST n numbers corresponding to an n number list.
+Since operating at optimal speed, depth will be no greater than log(n) [the number of times you can split n into recursive subprocesses]
+
+Hence, you can't beat a n*log(n) sorting algorithm

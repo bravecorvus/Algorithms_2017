@@ -1,0 +1,11 @@
+Assumptions: Random access memory(e.g. indexing elements does not cost you anything)
+			Looking at n[infinity] will not crash the program running this algorithm. (If it crashes the program, there will need to be a container Program to monitor the crash point, and for the inner program to communicate to the outer monitoring program the last index it checked for before it crashed. Then the outer program will set that as n[start] and binary search from there)
+
+Since we are trying to fit the number of comparisons at O(log base 2 of (n)), we will check the array by powers of two starting at i = 1, i = 2, i = 4, i = 16 ... until n[i] > x or n[i] = undefined (infinity). Although unlikely in this step, return the value of i if n[i] = x. Finding the value of i such that n[i] > x will take O(log(n)) time.
+
+If not, check the values of n between when the n[i] was lower than x and when n[i] was higher than x. Since we were counting by powers of 2, this will be something like n[(2^(p-1)):2^p]. Then we will recur this sublist back through a similar function setting n[2^p-1] as element 0 and n[2^p] as the last. Then we check x against n[1], n[2], n[4], n[8], n[16], ... until n[i] such that n[i] == x in which case we return that back to the recursive call or n[i] > x in which case, we repeat the recursion n[(2^(z-1)):2^z] where 2^z > x
+
+
+The cost of the first recursion is O(log base 2 of (n)). Next, the next level will cost O(log base 2 of ((2^p - (2^(p-1))) )) + O(log base 2 of ((2^z - (2^(z-1))) )) + ...
+
+Since 2^p - 2^p-1 is going to be a miniscually small number as compared with n (), we can consider it "insignificant" and assume this method of finding x will still take O(log(n)) time.

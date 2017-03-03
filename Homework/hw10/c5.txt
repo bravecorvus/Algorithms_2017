@@ -1,0 +1,25 @@
+A is "Divide and Conquer": Therefore, use master theorum
+A = 5T(n/2) + O(n^d) (since we are making 5 subproblems of size n/2).
+Since we are splitting passing half the problem size in the recursion, depth will be log base 2(n) again.
+Since we are combining solutions in linear time, n^d = 1. Hence, d = 0.
+since 0 < log base 2 of (5) -> d < log base b of (a), we will use the form O(n^(log base b of a)
+Hence, O(n ^ (log base 2 of 5)) = O(n^2.33)
+
+B is using recursion and solving a problem. However, since the the problem size is going down by a constant rate rather than by a factor, b will be < 1, and hence, this cannot be considered a divide and conquer problem.
+Then manually expanding this recursion problem:
+T(n) = 2T(n-1)+ O(1)
+T(n) <= 2[2T(n-2) + (1 - 1)]		 			
+T(n) <= 2(2[2T(n-3) + (0 - 1)]) 				
+T(n) <= 2(2(2[2T(n-4) + (-1 - 1)])) 	 		
+T(n) <= 2(2(2(2[2T(n-5) + (-2 - 1)]))) 	 		
+T(n) <= 2(2(2(2(2[2T(n-6) + (-3 - 1)]))))
+The pattern shows that the beginning portion up until n has the largest effect on the behavior of T(n).
+Hence, the pattern is O(2^n).
+
+
+C can be found using Master Theorum.
+C = 9T(n/3) + O(n^2) (9 subproblems of size n/3)
+Since the branching factor is 3, depth will be log base 3 of 9.
+Since the d = log base 3 of 9, by the Master Theorum, C's growth rate can be limited by O((n^2)*(log(n)))
+
+Out of all of these, the fastest is since taking a log as the power to n is still faster than n^2 and 2^n.

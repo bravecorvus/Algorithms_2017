@@ -1,0 +1,19 @@
+Show that any array of integers x[1,...n] can be sorted in O(n + M) time, where M = max(x) of i - min(x) of i
+
+For small M, this is linear time: why doesn't the Omega(nlogn) lower bound apply in this case.
+
+What we need to define is what is "a small M". Well, taking the basic premise behind quick sort, 50% of our array will be in between the 25th percentile and the 75th percentile.
+
+Now taking some small M (the distance between max(x) and min(x) is small, we will see that distance between the 25th and 75th percentile also becomes shrinks)
+
+Furthermore, if you reduce the size of M as far as you can, you eventually hit such a list that has only 2 types of elements (e.g. 0's and 1's) or worse has 1 type of element that has 100% of its elements are repeats. In both cases, you can utilize an algorithm that exploits the large number of repeats, and does not need to recursively sort.
+
+Then, at m = 1, we can have an algorithm that first looks for a number, and remembers it as A, then appends a listA with A's until reaching a different value. Then it remembers the second type of value as B, and appends listB until it reaches another A and then so on.
+
+This function would run O(n) times since it is completely iterative, and we can easily glue back the 2 lists at the end.
+For our sorting lower bound Omega(nlogn), we did not have to account for branching out the recursive tree of depth log base 2 of (n) since as there are only 2 values, we can efficiently implement a single iterative loop that can sort out the list completely.
+Hence, our time will be O(n+1), which satisfied the lemma at the top.
+
+Next, at m = 0, (all values same) we can implement a "sorting" algorithm [and I now use that term a bit liberally], to intake the list, then return the list immediately without doing any comparisons. Then of course it will not be bound by the O(nlogn) lower bound since no comparisons are being made and no recursive calls are being made. In fact, since this algorithm doesn't even really need to "sort", it won't even take the O(n+M) time that is defined in the lemma. It will take O(c) where c is some constant.
+
+Now going back, we can further assertain that as you grow the value of M such that max(x) and min(x) become farther apart, you get less repeats, and need to begin to use an actual recursive sorting algorithm and hence, you get closer and closer to a runtime of O(n log base 2 of (n))

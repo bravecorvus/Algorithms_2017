@@ -1,0 +1,6 @@
+Calling binary integer #1 b1 and binary integer #2 b2, we have
+b1L = 0b1001 b1R = 0b1011 b2L = 0b1011 b2R = 0b1010
+
+Then the value of x*y = ((0b10^(0b1000 / 0b10)) * 0b1001 * 0b1011) + (2^(0b1000/0b10))*(0b1001 * 0b1010 + 0b1011 * 0b1011) + 0b1011 * 0b1010
+Next, the n will be 4, and hence, b1L b1R b2L b2R will be binaries length 2. Then we will recur until n = 1.
+x*y = 0b1001111001110 base 2 or 5070 base 10
