@@ -1,0 +1,30 @@
+Equations are in Latex. Use https://www.codecogs.com/latex/eqneditor.php if you want to see the equation in mathematical form.
+For r, s = n/2
+(X*Y) can be expressed as  "\sum_{i = 0}^{n}(X_{ri})*(Y_{si})"
+
+
+Finding the dot product of the product matrix element (0, 0) can be expressed as: "XY_{(0,0)}=\sum_{i=0}^{n/2}(A_{ri})*(E_{si})+\sum_{i=0}^{n/2}(B_{ri})*(G_{si})"
+
+Next, for XY(1, 0), we have "XY_{(1,0)}=\sum_{i=0}^{n/2}(A_{ri})*(F_{si})+\sum_{i=0}^{n/2}(B_{ri})*(H_{si})"
+
+For XY(0, 1), we have "XY_{(0,1)}=\sum_{i=0}^{n/2}(C_{ri})*(E_{si})+\sum_{i=0}^{n/2}(D_{ri})*(G_{si})"
+
+Finally for XY(1, 1), we have "XY_{(1,1)}=\sum_{i=0}^{n/2}(C_{ri})*(F_{si})+\sum_{i=0}^{n/2}(D_{ri})*(H_{si})"
+
+Hence, if "X = \begin{bmatrix}
+ A & B \\ 
+ C & D
+\end{bmatrix}" and "Y = \begin{bmatrix}
+ E & F \\ 
+ G & H
+\end{bmatrix}", then X*Y = "XY = \begin{bmatrix}
+\sum_{i=0}^{n/2}(A_{ri})*(E_{si})+\sum_{i=0}^{n/2}(B_{ri})*(G_{si})   &   \sum_{i=0}^{n/2}(A_{ri})*(F_{si})+\sum_{i=0}^{n/2}(B_{ri})*(H_{si})\\ 
+\sum_{i=0}^{n/2}(C_{ri})*(E_{si})+\sum_{i=0}^{n/2}(D_{ri})*(G_{si})   &   \sum_{i=0}^{n/2}(C_{ri})*(F_{si})+\sum_{i=0}^{n/2}(D_{ri})*(H_{si})
+\end{bmatrix}"
+
+which is "XY = \begin{bmatrix}
+AE + BG  &  AF + BH \\
+CE + DG  &  CF + FD
+\end{bmatrix}"
+
+Q.E.D.

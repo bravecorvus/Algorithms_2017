@@ -1,0 +1,7 @@
+enter search query
+4
+7
+4
+0
+Query found in array at index 0
+enter search query

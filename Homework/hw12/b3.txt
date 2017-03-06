@@ -1,0 +1,15 @@
+To start, the reason why binary search specifically is O(log of n) rather than O(log base 2 of n) is because rewriting log 2 of (n), you get (log base x of n)/(log base x of 2), and the denominator constant log of 2 becomes negligable for larger and larger values of n.
+
+Now, since we are only looking at algorithms that use comparison, that puts limits on the type of behavior of our algorithm. It will only change the branching factor and the size of the subproblem since the only change in behavior that we can change that will still fit "algorithms that use comparison" is basically to increase the comparisons, and passing and even smaller list.
+
+For example, take this pseudocode for trisearch
+split the list into thirds:
+if value < first value of middle third, then pass list[1:length(list)/3]
+else if value > last value of first third and value < first value of last third sublist, then pass list[length(list)/3:2*length(list)/3]
+else if value > last value of middle half, then recur list[2*length(list)/3:len(list)]
+
+In this way, since we are passing a value n/3 into the next recurrence, our search will take log base 3 of n, if we split into 4, our search will take log base 4 of n steps. However, the proof int he beginning (i.e. log base x of (n) = (log base a of (n))/(log base a of x)), which will always be log(n).
+
+Next, looking at what else you could do if you don't "divide" the problem, it will only get worse from log(n). Since the next option will be to manually go through each element and do the comparison which will be n rather than log(n).
+
+Hence, comparison based search algorithms in the form of A[i] <= z will be Omega(log(n))
