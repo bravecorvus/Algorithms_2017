@@ -17,6 +17,7 @@ LinkedListStack::LinkedListStack(int inputarray[], int listlen) {
 }
 LinkedListStack::LinkedListStack() {
     head = new node;
+    head->cell = NULL;
     stacklen = 0;
 }
 LinkedListStack::~LinkedListStack() {
@@ -51,17 +52,11 @@ int LinkedListStack::pop() {
     return(returnvar);
 }
 void LinkedListStack::push(int arg) {
-    if (stacklen == 0) {
-        head->cell = arg;
-        ++stacklen;
-        head->tail = new node;        
-    } else {
-        node *newhead = new node;
-        newhead->cell = arg;
-        newhead->tail = head;
-        head = newhead;
-        ++stacklen;
-    }
+    node *newhead = new node;
+    newhead->cell = arg;
+    newhead->tail = head;
+    head = newhead;
+    ++stacklen;
 }
 
 int LinkedListStack::getStackLength() {
