@@ -17,7 +17,6 @@ LinkedListStack::LinkedListStack(int inputarray[], int listlen) {
 }
 LinkedListStack::LinkedListStack() {
     head = new node;
-    head->cell = NULL;
     stacklen = 0;
 }
 LinkedListStack::~LinkedListStack() {
