@@ -1,0 +1,10 @@
+\documentclass{article} \title{B1} \author{Andrew Lee} \begin{document} \maketitle{}
+\textrm{If} f(n) = O(g(n))\textrm{, and }g(n) = O(f(n))\textrm{ then } f(n) = \theta(g(n))\\\\\\
+\textrm{If } f(n) = O(g(n)), \textrm{, then by the definition of Big-O, }f(n) \leq c*g(n) \forall c>0\\\\
+\textrm{Furthermore, if }g(n) = O(f(n))\textrm{, then by the definition of Big-O, }\\g(n) \leq c*f(n) \forall c>0\\\\
+\textrm{Then }\exists\textrm{ constants }c_{1},c_{2}, \textrm{ such that } c_{1}*f(n) = c_{2}*g(n)\\\\
+\textrm{Hence, }f(n)=\frac{c_{2}*g(n)}{c_{1}}\textrm{, and }g(n)=\frac{c_{1}*f(n)}{c_{2}}\\\\
+\textrm{Hence, }f(n) \geq c_{3}*g(n)\textrm{ and }g(n) \geq c_{4}*f(n)\textrm{ for some constants } c_{3}\ and\ c_{4}\\
+\textrm{Therefore, by the definition of Big-}\Omega\textrm{, }f(n)=\Omega(g(n))\textrm{ and }g(n)=\Omega(f(n))\textrm{.}\\\\
+\textr{Because }f(n)=O(g(n))\textrm{ and }f(n)=\Omega(g(n)), f(n)=\theta(g(n)) \textrm{ and}\\\textrm{ because }g(n)=O(f(n))\textrm{ and }g(n)=\Omega(f(n)), g(n)=\theta(f(n)).
+\end{document}
