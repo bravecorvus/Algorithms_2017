@@ -21,7 +21,7 @@ void StackPlus100::pushStackPlus100(int arg) {
         for (int i = 0; i <= maxstacksize; ++i) {
             temparray[i] = array[i];
         }
-        // delete [] array;
+        delete [] array;
         array = temparray;
         temparray = NULL;
         maxstacksize += 100;
