@@ -1,0 +1,22 @@
+\documentclass{article}\title{F1}\author{Andrew Lee}\begin{document}
+\textrm{ (a) Show that in an undirected graph, }\sum_{u\in V} d(u) = 2|E|.\\
+\textrm{ Let }x=\textrm{ the sum of all edges attached at all }u \in V\\\textrm{. That is } x= d(u_{1}) + d(u_{2}) + d(u_{3}) +...+ d(u_{n})\\
+\\\textrm{ Then the average number of edges for given node }u=\frac{x}{n}\\
+\textrm{However, because every node }u\ \exists \textrm{ another node } v | u\textrm{ must share a common edge with }\\v\textrm{, we end up double counting, the average number of edges for }u\textrm{ is actually }\\\frac{1}{2}*\frac{x}{n}\\\\
+\textrm{Hence, by our previous equation, } \frac{1}{2}x = \frac{1}{2}d(u_{1}) + \frac{1}{2}d(u_{2}) + ... \frac{1}{2}d(u_{n}).\\\\
+\textrm{Therefore, since }\frac{1}{2}\sum_{u\in V} d(u),\ \sum_{u\in V} = d(u) = 2|E|\\\textrm{ Q.E.D.}\\\\\\
+\textrm{ (b) Use part (a) to show that in an undirected graph,}\\\textrm{there must be an even number of vertices whose degree is odd.}\\
+\textrm{Let }\{ d(u_{1}), d(u_{2}), d(u_{3}), d(u_{n})\}\\\textrm{ represent the degrees of all the vertices n }\in V\\
+\textrm{Then let's assume there is an odd number of odd degree vertices such that the average looks like }\\
+\{(2k+1)_{1}, (2k+1)_{2}, ... , (2k+1)_{2t+1}\}\textrm{ where }d=2k+1,\textrm{ and }2t+1\textrm{ represents some odd number}\\
+\textrm{Then we can match each vertex with degree }2k+1\textrm{ to another vertex with degree }2k+1.\\
+\textrm{ However, since the vertices  with odd degrees in the form } 2k+1\textrm{ will always be }\\
+ +1 \textrm{ or } -1\textrm{ off from an even number vertex in the form }2k\textrm{, the odd number vertices can only}\\
+ \textrm{will be missing 1 or having 1 too many connections with even vertices. }\\
+\textrm{Hence, there must be matching pairs of odd degree vertices in an undirected graph}\\\\\\
+\textrm{ (c) This statement cannot be proven for a directed graph. Take a 2 node graph}\\
+\textrm{with a single directional edge going from one to the other. If you count the indegree,}\\
+\textrm{one would be 0 and the other 1. Next counting the outdegree, one would be 1 and the other 0}\\
+\textrm{Hence, the above theorum will not hold for directed graphs}
+
+\end{document}

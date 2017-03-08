@@ -1,0 +1,26 @@
+\documentclass{article}\title{F2}\author{Andrew Lee}\begin{document}
+\textrm{ (a) Show that an undirected graph has an Eulerian tour if and only if all its vertices}\\\textrm{all its vertices have even degree.}\\\\
+\textrm{Let the tour of Konigsberg bridges be represented by the following set of vertices: }\{NB, BI, SB, SI\}\\
+\textrm{Next, let D represent all the possbible degrees that the vertices can have.}\\
+\textrm{If all vertices are degree two, then each vertex is connected to two other vertices exactly once.}\\
+\textrm{Since there is only one path between any two vertices, anyone crossing the edges need only to follow the open path},\\
+\textrm{or rather, the edge they did not just cross and in doing so closed off, and eventually, they will reach}\\
+\textrm{a place that took total edges - 1 with only the edge back to the starting point with 4 total moves}.\\\\
+\textrm{Next, let every vertex be degree = 4.  Then for every possible path, we get an extra reversible path that}\\
+\textrm{in a similar fashion, allows them to start and finish at the same vertex, while taking only unique edges,}\\
+\textrm{this time, with 8 moves.}
+\textrm{We can do this an unlimited amount of times, which for every degree 2k, then the Eulerian tour can be completed in 4k steps}
+\textrm{However, adding an odd degree will prevent this tour to be completed because of the following.}
+\textrm{Since the mode of thinking is to go out an even amount of spacing,}\\
+\textrm{then reach the fartest point in k steps where you can trace back using k steps which will all be unique}\\
+\textrm{Hence, adding an odd number will prevent our ability to trace back in k steps since we will either go k+1}\\
+\textrm{(1 step too far), or k-1 steps (1 step too short) which will prevent a unique path back to the starting point}
+\textrm{Hence, an undirected graph has an Eulerian tour if and only if all its vertices}\\
+\textrm{have even degree. (No Eulerian tour of Konisberg Bridge)}\\\\\\
+\textrm{ (b) Give an iff characterization of which undirected graphs have Eulerian paths}\\
+\textrm{An Eulerian path exists in an undirected graph} \Leftrightarrow\textrm{ 2 vertices have some odd degree, and the}\\
+\textrm{the rest all have even degrees}\\\\\\
+\textrm{ (c) Can you give an analog of part (a) for directed graphs?}\\
+\textrm{For every vertex } u_{1}, u_{2}, u_{3}, u_{4},\\ \textrm{ for every outbound edges going from one vertex to another, there must be an incoming vertex}\\\textrm{going from that vertex, back to the original edge. (Or in other words, splitting the direction of the graph,}\\
+\textrm{the graph must still follow the even degree rule from (a))}
+\end{document}
