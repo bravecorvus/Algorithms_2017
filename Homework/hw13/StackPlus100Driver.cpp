@@ -33,7 +33,7 @@ int main() {
     float z = elapsed_time();
     cout << z << " cycles\n";
 
-    StackPlus100 test999999999(fi, 1, 100);
+    StackPlus100 test999999999(fi, 1, 1);
     cout << "For 999999999 elements, it takes ";
     start_timer();
     for(int i = 0; i < 999999999; ++i) {
