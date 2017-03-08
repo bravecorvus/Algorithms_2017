@@ -42,11 +42,11 @@ int main() {
     for(int i = 0; i < 999; ++i) {
         d = test999.pop();
     }
-    LinkedListStack test99999999;
-    cout << "For 99999999 elements, it takes ";
+    LinkedListStack test999999999;
+    cout << "For 999999999 elements, it takes ";
     start_timer();
     for(int i = 0; i < 99999999; ++i) {
-        test99999999.push(7);
+        test999999999.push(7);
     }
     float p = elapsed_time();
     cout << p << " cycles\n";
