@@ -13,6 +13,10 @@ int main() {
     }
     float x = elapsed_time();
     cout << x << " cycles\n";
+    int h;
+    for(int i = 0; i < 19; ++i) {
+        h = test19.pop();
+    }
 
     LinkedListStack test99;
     cout << "For 99 elements, it takes ";
@@ -22,7 +26,10 @@ int main() {
     }
     float y = elapsed_time();
     cout << y << " cycles\n";
-
+    int r;
+    for(int i = 0; i < 99; ++i) {
+        r = test99.pop();
+    }
     LinkedListStack test999;
     cout << "For 999 elements, it takes ";
     start_timer();
@@ -31,7 +38,10 @@ int main() {
     }
     float z = elapsed_time();
     cout << z << " cycles\n";
-
+    int d;
+    for(int i = 0; i < 999; ++i) {
+        d = test999.pop();
+    }
     LinkedListStack test999999999;
     cout << "For 999999999 elements, it takes ";
     start_timer();
