@@ -1,22 +1,22 @@
 #include <iostream>
 using namespace std;
-#include "StackPlus100.h"
+#include "StackPlus.h"
 
-int StackPlus100::popStackPlus100() {
+int StackPlus::popStackPlus() {
     if (topofstack == 0) {
-        cout << "StackPlus100 is empty\n\n" << endl;
+        cout << "StackPlus is empty\n\n" << endl;
         return(-1);
     } else {
         --topofstack;
         return(array[topofstack+1]);
     }
 }
-void StackPlus100::setTOSIndex(int arg) {
+void StackPlus::setTOSIndex(int arg) {
     topofstack = arg;
 }
-void StackPlus100::pushStackPlus100(int arg) {
+void StackPlus::pushStackPlus(int arg) {
     ++topofstack;
-    if (topofstack > maxstacksize) {//Most efficient Way, Look at alternate implementation below this if and above the else to find the accurate behavior implementation
+    if (topofstack > maxstacksize) {
         int *temparray = new int[maxstacksize+101];
         for (int i = 0; i <= maxstacksize; ++i) {
             temparray[i] = array[i];

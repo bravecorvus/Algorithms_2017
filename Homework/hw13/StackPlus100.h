@@ -1,5 +1,5 @@
-#ifndef _StackPlus100_
-#define _StackPlus100_
+#ifndef _StackPlus_
+#define _StackPlus_
 // 1. Implement a stack data structure as a C++ class. Here is a concise definition for a stack. 
 // Please use a simple array as the basis for your data structure. Your stack should have a constructor whose
 // argument gives the maximum number of elements to be stored in the stack (thus allowing you to allocate an appropriate fixed-size array),
@@ -8,12 +8,12 @@
 #include <iostream>
 using namespace std;
 
-class StackPlus100 {
+class StackPlus {
     int *array;
     int topofstack;
     int maxstacksize;
     public:
-        StackPlus100(int inputarray[], int size, int arraysize) {
+        StackPlus(int inputarray[], int size, int arraysize) {
             array = new int[size];
             int counter = 0;
             for (int i = 0; i < arraysize; ++i) {
@@ -23,12 +23,12 @@ class StackPlus100 {
             topofstack = counter-1;
             maxstacksize = size-1;
         }
-        StackPlus100(int size) {
+        StackPlus(int size) {
             array = new int[size];
             topofstack = 0;
             maxstacksize = size-1;
         }
-        ~StackPlus100() {
+        ~StackPlus() {
             delete [] array;
         }
         int getTop() {
@@ -37,10 +37,10 @@ class StackPlus100 {
         int getTOSIndex() {
             return(topofstack);
         }
-        int getMaxStackPlus100Index() {
+        int getMaxStackPlusIndex() {
             return(maxstacksize);
         }
-        void printStackPlus100() {
+        void printStackPlus() {
             cout << "Starting at the top of the stack, and ending at the bottom of the stack\n[";
             for(int i = topofstack; i > 0; --i) {
                 cout << array[i] << ", ";
@@ -48,10 +48,10 @@ class StackPlus100 {
             cout << array[0] << "]\n\n" << endl;
         }
         void setTOSIndex(int);
-        int popStackPlus100();
-        void pushStackPlus100(int);
+        int popStackPlus();
+        void pushStackPlus(int);
 };
 
 
 
-#endif _StackPlus100_
+#endif _StackPlus_
