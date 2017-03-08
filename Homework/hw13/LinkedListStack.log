@@ -1,0 +1,4 @@
+For 19 elements, it takes 1707 cycles
+For 99 elements, it takes 15456 cycles
+For 999 elements, it takes 118494 cycles
+For 999999999 elements, it takes 3.04488e+09 cycles
