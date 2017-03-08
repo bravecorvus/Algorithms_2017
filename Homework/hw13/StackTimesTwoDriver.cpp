@@ -9,7 +9,7 @@ int main() {
     StackTimesTwo test19(fi, 1);
     cout << "For 19 elements, it takes ";
     start_timer();
-    for(int i = 0; i < 19, ++i) {
+    for(int i = 0; i < 19; ++i) {
         test19.pushStackTimesTwo(7);
     }
     float x = elapsed_time();
@@ -18,7 +18,7 @@ int main() {
     StackTimesTwo test99(fi, 1);
     cout << "For 99 elements, it takes ";
     start_timer();
-    for(int i = 0; i < 99, ++i) {
+    for(int i = 0; i < 99; ++i) {
         test99.pushStackTimesTwo(7);
     }
     float y = elapsed_time();
@@ -27,7 +27,7 @@ int main() {
     StackTimesTwo test999(fi, 1);
     cout << "For 999 elements, it takes ";
     start_timer();
-    for(int i = 0; i < 999, ++i) {
+    for(int i = 0; i < 999; ++i) {
         test999.pushStackTimesTwo(7);
     }
     float z = elapsed_time();
@@ -36,7 +36,7 @@ int main() {
     StackTimesTwo test999999999(fi, 1);
     cout << "For 999999999 elements, it takes ";
     start_timer();
-    for(int i = 0; i < 999999999, ++i) {
+    for(int i = 0; i < 999999999; ++i) {
         test999999999.pushStackTimesTwo(7);
     }
     float p = elapsed_time();

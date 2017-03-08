@@ -8,7 +8,7 @@ int main() {
     LinkedListStack test19;
     cout << "For 19 elements, it takes ";
     start_timer();
-    for(int i = 0; i < 19, ++i) {
+    for(int i = 0; i < 19; ++i) {
         test19.push(7);
     }
     float x = elapsed_time();
@@ -17,7 +17,7 @@ int main() {
     LinkedListStack test99;
     cout << "For 99 elements, it takes ";
     start_timer();
-    for(int i = 0; i < 99, ++i) {
+    for(int i = 0; i < 99; ++i) {
         test99.push(7);
     }
     float y = elapsed_time();
@@ -26,7 +26,7 @@ int main() {
     LinkedListStack test999;
     cout << "For 999 elements, it takes ";
     start_timer();
-    for(int i = 0; i < 999, ++i) {
+    for(int i = 0; i < 999; ++i) {
         test999.push(7);
     }
     float z = elapsed_time();
@@ -35,7 +35,7 @@ int main() {
     LinkedListStack test999999999;
     cout << "For 999999999 elements, it takes ";
     start_timer();
-    for(int i = 0; i < 999999999, ++i) {
+    for(int i = 0; i < 999999999; ++i) {
         test999999999.push(7);
     }
     float p = elapsed_time();
