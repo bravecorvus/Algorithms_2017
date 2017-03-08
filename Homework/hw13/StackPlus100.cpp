@@ -23,6 +23,7 @@ void StackPlus100::pushStackPlus100(int arg) {
         }
         delete [] array;
         array = temparray;
+        temparray = NULL;
         maxstacksize += 100;
         array[topofstack] = arg;
     } else {
