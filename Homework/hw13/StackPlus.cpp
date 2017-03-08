@@ -15,8 +15,8 @@ void StackPlus::setTOSIndex(int arg) {
     topofstack = arg;
 }
 void StackPlus::pushStackPlus(int arg) {
-    ++topofstack;
-    if (topofstack > maxstacksize) {
+    // ++topofstack;
+    if (topofstack == maxstacksize) {
         int *temparray = new int[maxstacksize+101];
         for (int i = 0; i <= maxstacksize; ++i) {
             temparray[i] = array[i];
@@ -26,7 +26,9 @@ void StackPlus::pushStackPlus(int arg) {
         temparray = NULL;
         maxstacksize += 100;
         array[topofstack] = arg;
+        ++topofstack;
     } else {
         array[topofstack] = arg;
+        ++topofstack;
     }
 }

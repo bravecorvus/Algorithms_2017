@@ -6,7 +6,8 @@ using namespace std;
 int main() {
         // #19 999 999999
     int fi[1];fi[0] = 7;
-    StackPlus test19(fi, 1, 1);
+    int andrew = 1;
+    StackPlus test19(andrew);
     cout << "For 19 elements, it takes ";
     start_timer();
     for(int i = 0; i < 19; ++i) {
@@ -15,7 +16,7 @@ int main() {
     float x = elapsed_time();
     cout << x << " cycles\n";
 
-    StackPlus test99(fi, 1, 1);
+    StackPlus test99(andrew);
     cout << "For 99 elements, it takes ";
     start_timer();
     for(int i = 0; i < 99; ++i) {
@@ -24,7 +25,7 @@ int main() {
     float y = elapsed_time();
     cout << y << " cycles\n";
 
-    StackPlus test999(fi, 1, 1);
+    StackPlus test999(andrew);
     cout << "For 999 elements, it takes ";
     start_timer();
     for(int i = 0; i < 999; ++i) {
@@ -33,11 +34,11 @@ int main() {
     float z = elapsed_time();
     cout << z << " cycles\n";
 
-    StackPlus test99999999(fi, 1, 1);
+    StackPlus testa(andrew);
     cout << "For 99999999 elements, it takes ";
     start_timer();
     for(int i = 0; i < 99999999; ++i) {
-        test99999999.pushStackPlus(7);
+        testa.pushStackPlus(7);
     }
     float p = elapsed_time();
     cout << p << " cycles\n";
