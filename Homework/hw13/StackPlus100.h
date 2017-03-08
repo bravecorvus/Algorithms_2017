@@ -13,10 +13,10 @@ class StackPlus100 {
     int topofstack;
     int maxstacksize;
     public:
-        StackPlus100(int inputarray[], int size) {
+        StackPlus100(int inputarray[], int size, int arraysize) {
             array = new int[size];
             int counter = 0;
-            for (int i = 0; inputarray[i] != NULL; ++i) {
+            for (int i = 0; i < arraysize; ++i) {
                 ++counter;
                 array[i] = inputarray[i];
             }
