@@ -1,5 +1,5 @@
-#ifndef _StackPlus100Plus100_
-#define _StackPlus100Plus100_
+#ifndef _StackPlus100_
+#define _StackPlus100_
 // 1. Implement a stack data structure as a C++ class. Here is a concise definition for a stack. 
 // Please use a simple array as the basis for your data structure. Your stack should have a constructor whose
 // argument gives the maximum number of elements to be stored in the stack (thus allowing you to allocate an appropriate fixed-size array),
@@ -54,4 +54,4 @@ class StackPlus100 {
 
 
 
-#endif _StackPlus100Plus100_
+#endif _StackPlus100_
