@@ -10,7 +10,6 @@ using namespace std;
 
 class StackPlus100 {
     int *array;
-    int *temparray;
     int topofstack;
     int maxstacksize;
     public:

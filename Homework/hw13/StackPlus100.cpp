@@ -17,7 +17,7 @@ void StackPlus100::setTOSIndex(int arg) {
 void StackPlus100::pushStackPlus100(int arg) {
     ++topofstack;
     if (topofstack > maxstacksize) {//Most efficient Way, Look at alternate implementation below this if and above the else to find the accurate behavior implementation
-        temparray = new int[maxstacksize+101];
+        int *temparray = new int[maxstacksize+101];
         for (int i = 0; i <= maxstacksize; ++i) {
             temparray[i] = array[i];
         }
