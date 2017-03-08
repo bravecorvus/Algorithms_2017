@@ -51,11 +51,17 @@ int LinkedListStack::pop() {
     return(returnvar);
 }
 void LinkedListStack::push(int arg) {
-    node *newhead = new node;
-    newhead->cell = arg;
-    newhead->tail = head;
-    head = newhead;
-    ++stacklen;
+    if (stacklen == 0) {
+        head->cell = arg;
+        ++stacklen;
+        head->tail = new node;        
+    } else {
+        node *newhead = new node;
+        newhead->cell = arg;
+        newhead->tail = head;
+        head = newhead;
+        ++stacklen;
+    }
 }
 
 int LinkedListStack::getStackLength() {
