@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  8 MAR 2017 06:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  8 MAR 2017 13:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -54,12 +54,12 @@ Here is how much of TeX's memory you used:
  3831 multiletter control sequences out of 15000+600000
  3986 words of font info for 15 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 23i,4n,17p,407b,107s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 23i,4n,17p,624b,107s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/
 local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
 cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
 Output written on /Users/andrewlee/Documents/School/Spring2017/Algorithms/Homew
-ork/hw13/f3.pdf (1 page, 27638 bytes).
+ork/hw13/f3.pdf (1 page, 27802 bytes).
 PDF statistics:
  16 PDF objects out of 1000 (max. 8388607)
  10 compressed objects within 1 object stream

@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1488977824 "/Users/andrewlee/Documents/School/Spring2017/Algorithms/Homework/hw13/f3.tex" "/Users/andrewlee/Documents/School/Spring2017/Algorithms/Homework/hw13/f3.pdf" "f3" 1488977824
-  "/Users/andrewlee/Documents/School/Spring2017/Algorithms/Homework/hw13/f3.aux" 1488977824 8 a94a2480d3289e625eea47cd1b285758 ""
-  "/Users/andrewlee/Documents/School/Spring2017/Algorithms/Homework/hw13/f3.tex" 1488977824 683 d864b5265c234ea3dc506d87736ead4f ""
+["pdflatex"] 1489001013 "/Users/andrewlee/Documents/School/Spring2017/Algorithms/Homework/hw13/f3.tex" "/Users/andrewlee/Documents/School/Spring2017/Algorithms/Homework/hw13/f3.pdf" "f3" 1489001014
+  "/Users/andrewlee/Documents/School/Spring2017/Algorithms/Homework/hw13/f3.aux" 1489001013 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/Users/andrewlee/Documents/School/Spring2017/Algorithms/Homework/hw13/f3.tex" 1489001013 900 97f727713882182f4c41e70018bdcf3b ""
   "/usr/local/texlive/2016/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
@@ -12,11 +12,11 @@
   "/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1474576172 1888048 f2c5faed5981a516f406b2ccc20bff71 ""
   "/usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt" 1463979169 3873397 413fbfbbedb8e719ddc392043a7add02 ""
   "/usr/local/texlive/2016/texmf.cnf" 1463979140 577 2938757e76f31531e65cc647e3507693 ""
-  "f3.aux" 1488977824 8 a94a2480d3289e625eea47cd1b285758 ""
-  "f3.tex" 1488977824 683 d864b5265c234ea3dc506d87736ead4f ""
+  "f3.aux" 1489001013 8 a94a2480d3289e625eea47cd1b285758 ""
+  "f3.tex" 1489001013 900 97f727713882182f4c41e70018bdcf3b ""
   (generated)
   "/Users/andrewlee/Documents/School/Spring2017/Algorithms/Homework/hw13/f3.log"
-  "f3.pdf"
-  "f3.aux"
-  "f3.log"
   "/Users/andrewlee/Documents/School/Spring2017/Algorithms/Homework/hw13/f3.pdf"
+  "f3.log"
+  "f3.aux"
+  "f3.pdf"
