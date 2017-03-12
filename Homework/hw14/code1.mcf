@@ -1,0 +1,6 @@
+[
+    true*.
+    foo(false).
+    !(foo(true))*.
+    bar
+]false

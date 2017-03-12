@@ -1,0 +1,28 @@
+\documentclass[10pt,a4paper,oneside]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc} %use different encoding (copy from pdf is now possible}
+\usepackage{fullpage} %small margins
+\usepackage{color}
+\definecolor{light-gray}{gray}{0.85}
+\usepackage{listings} %sourcecode
+\lstset{
+    numbers=left,
+    breaklines=true,
+    backgroundcolor=\color{light-gray},
+    tabsize=2,
+    basicstyle=\ttfamily,
+}
+\begin{document}\title{3.5}\author{Andrew Lee}\maketitle{}
+\textrm{The \textit{reverse} of a directed graph \textit{G = (V, E)} is another directed graph \newline}
+G^{R}=(V,E^{R})\textrm{on the same vertex set, but with all edges reversed; that is,\newline}
+E^{R}=\{(v,u) : (u, v) \in E\}.\\
+\textrm{Give a linear-time algorithm for computing the reverse of a graph in adjacency \newline list format.}\\
+
+\lstinputlisting[tabsize=2]{reverseAdjacency.py}
+
+\textrm{The above algorithm work because all it is doing is taking in the adjacency list \newline and  converting them all to an list with all the \newline given edges, then flipping element one and two in the append([data2, count]) command. \newline This runs in linear time relative to the total number of edges in the graph because the overall \newline time complexity is in e (for number of edges) and it is iterating through all elements and \newline with all the operationg of reversing running at a constant rate.}\newline\\ T(e) = O(c*e) \textrm{ where c is some constant and e is the total number of edges}
+\end{document}

@@ -1,0 +1,25 @@
+\documentclass[10pt,a4paper,oneside]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc} %use different encoding (copy from pdf is now possible}
+\usepackage{fullpage} %small margins
+\usepackage{color}
+\definecolor{light-gray}{gray}{0.85}
+\usepackage{listings} %sourcecode
+\lstset{
+    numbers=left,
+    breaklines=true,
+    backgroundcolor=\color{light-gray},
+    tabsize=2,
+    basicstyle=\ttfamily,
+}
+\begin{document}\title{3.9}\author{Andrew Lee}\maketitle{}
+\textrm{For each node u in an undirected graph, let } twodegree[u] \textrm{ be the sum of the\newline degrees of u\’s neighbors. Show how to compute the entire array of\newline}\textrm{ twodegree[\·] values in linear time, given a graph in adjacency list format.}\\\\
+
+\lstinputlisting[tabsize=2]{twodegree.py}
+
+\newline\\\\\\textrm{The reason why the above algorithm works is it takes in the list already in adjacency list form,\newline then for any given vertex u, it finds all the adjacent vertices, and then measures the length \newline of their adjacent vertexes list. Hence, it will take the amount of time to count all the edges (or every vertex connection a vertex has, which is equal to the total number of edges), + some constant integer \newline for calculating the length of a list.}
+\end{document}
