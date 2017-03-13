@@ -1,0 +1,27 @@
+\documentclass[10pt,a4paper,oneside]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc} %use different encoding (copy from pdf is now possible}
+\usepackage{fullpage} %small margins
+\usepackage{color}
+\definecolor{light-gray}{gray}{0.85}
+\usepackage{listings} %sourcecode
+\lstset{
+    numbers=left,
+    breaklines=true,
+    backgroundcolor=\color{light-gray},
+    tabsize=2,
+    basicstyle=\ttfamily,
+}
+\begin{document}\title{3.16}\author{Andrew Lee}\maketitle{}
+
+\textrm{Suppose a CS curriculum consists of \textit{n} courses, all of them mandatory. The}\\\textrm{prerequisite graph \textit{G} has a node for each course, and an edge from course \textit{v} to}\\\textrm{course \textit{w} if and only if \textit{v} is a prerequisite for \textit{w}. Find an algorithm that works}\\\textrm{directly with this graph representation, and computes the minimum number of}\\\textrm{semesters necessary to complete the curriculum (assume that a student can take}\\\textrm{any number of courses in one semester). The running time of your algorithm}\\\textrm{should be linear.}\\\\
+\textrm{The first thing to note is that this will be a directed graph since we need to specify }\\\textrm{a pre-requisite, class u for class v, it is not true that}\\\textrm{class v will be a prerequisite for class u. Furthermore, since ``a student can take any number of courses in one semester'', we can start at all the classes that do not have a requirement or rather vertices}\\\textrm{that are only sources. vertex, and simultaneously traverse all the adjacency lists of vertices at every stage.}\\\\\textrm{The specific search algorithm for this problem will be breadth first search,}\\\textrm{which specializes in being able to find all the possible vertices within n steps (edges)}\\\textrm{from the root (or roots). This behavior is desirable because of the condition that we can traverse}\\\textrm\{multiple edges at once, and the speed at which BFS works becomes better more edges can be traversed.}
+
+\lstinputlisting[tabsize=2]{curriculum.py}
+
+\\\textrm{The reason why this program is linear is because we will wait at most N steps for the computation}\\\textrm{ to complete, but because we are allowed to take ``multiple classes'' this will most likely be}\\\textrm{significantly faster than just taking one step at a time. In fact, although }T(n)=\bigotimes(n),\ T(n)=\Omega(1)\\\textrm{because in the best case scenario, with no prerequisites for classes, we can add all the classes in one ``step''.}
+\end{document}

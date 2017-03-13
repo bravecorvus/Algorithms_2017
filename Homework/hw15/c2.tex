@@ -1,0 +1,30 @@
+\documentclass[10pt,a4paper,oneside]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc} %use different encoding (copy from pdf is now possible}
+\usepackage{fullpage} %small margins
+\usepackage{color}
+\definecolor{light-gray}{gray}{0.85}
+\usepackage{listings} %sourcecode
+\lstset{
+    numbers=left,
+    breaklines=true,
+    backgroundcolor=\color{light-gray},
+    tabsize=2,
+    basicstyle=\ttfamily,
+}
+\begin{document}\title{3.7}\author{Andrew Lee}\maketitle{}
+\textrm{\textbf{(a)}}
+\textrm{A \textit{biparte graph} is a graph }G=(V, E)\textrm{ whose vertices can be partitioned into}\\
+\textrm{two sets }(V=V_{1} \cup V_{2} \textrm{ and }V_{1} \cap V_{2} = \emptyset)\textrm{ such that there are no edges between}\\\textrm{ vertices in the same set (for instance, if } u, v \in V_{1}\textrm{, then there is no edge between \newline \textit{u} and \textit{v})}.\\\\
+\textrm{An algorithm that can determine wheather an undirected graph is bipartite is one } \newline \textrm{that uses DFS to seek out if there are odd number cycles in the graph. The reason why this algorithm will work}\newline\textrm{is because every point must be in one of the two sets }V_{1} or V_{2}\textrm{. Now being that no vertex in the subset can share an} \newline\textrm{ edge with another vertex, it follows that the only shared edges must then be between vertices of the two submatrices.}\newline\\\textrm{Then, let's suppose we have }V_{1} \textrm{ and } V_{2}\textrm{. Then, let there be an odd cycle between the two sets.}\newline\textrm{Then, starting at u from }V_{1}, there will be two possibilities.}\newline\textrm{1) u will connect one or more vertices } \in V_{1}\textrm{ or }\\\textrm{2) u will share two or more edges with vertices in }V_{2}.\\
+\\\textrm{Case 1 immediately fails the definition for biparte graph while Case 2 will also inevitably fail}\newline\textrm{since in order to complete the odd circuit, at least two vertices from the other graph will need to share an edge}\newline\textrm{in order to prevent a crossover in }V_{1}.\\\\
+\textrm{Even circuits however do not affect this tracing back and forth from }V_{1} \textrm{ to }V_{2}\textrm{ back to }V_{1}\\\textrm{Will always be done in moves of two, which means if there are only even circuits, it is possible}\\\textrm{to divide V into }V_{1}, V_{2}\textrm{that fit the definition.}\\\\\textrm{The algorithm's time complexity is } T(n) = O(N)\textrm{ because using DFS, we will look at at most N edges, with a small}\newline
+\textrm{constant factor for checking for odd circuits.}\\\\\\\\
+\textrm{\textbf{(b)}}\\\textrm{Look at \textbf{(a)}}\\\\\\\\
+\textrm{\textbf{(c)}}\\
+\textrm{To rephrase the question, when we get we have }V_{1}\textrm{ with }2k_{1}\textrm{ cycles and }V_{2}\textrm{ with }2k_{2}+1\\\textrm{ cycles where }V_{1} and V_{2}\textrm{ are sets that come from }V\textrm{ and }k_{1}\textrm{ and }k_{2}\textrm{ are some}\textrm{integers which create even numbers when}\\\textrm{ multiplied by 2 and odd when multiplied by 2 and added a 1. Then the question becomes how many more }V_{P}\\\textrm{ do we have to add to ensure no two vertices from the same subset share vertices. Well, since the only thing}\\\textrm{we need to do to is to break the 1 odd cycle, making }V_{2} = 2k_{2}\textrm{, which only requires moving one number}\newline\textrm{into a new subset}V_{3}\textrm{ which will only take 1 more color.}
+\end{document}

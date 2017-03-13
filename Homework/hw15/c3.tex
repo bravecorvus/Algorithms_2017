@@ -1,0 +1,30 @@
+\documentclass[10pt,a4paper,oneside]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc} %use different encoding (copy from pdf is now possible}
+\usepackage{fullpage} %small margins
+\usepackage{color}
+\definecolor{light-gray}{gray}{0.85}
+\usepackage{listings} %sourcecode
+\lstset{
+    numbers=left,
+    breaklines=true,
+    backgroundcolor=\color{light-gray},
+    tabsize=2,
+    basicstyle=\ttfamily,
+}
+\begin{document}\title{3.12}\author{Andrew Lee}\maketitle{}
+
+\textrm{Either prove or give a counterexample: if {u, v} is an edge in an undirected}\newline\textrm{graph, and during depth-first search post(u) < post(v), then v is an ancestor of}\\\textrm{u in the DFS tree.}\\\\
+\textrm{The only case when a vertex }u\textrm{can have a smaller post value than another vertex }v\\\textrm{ is when there is a braching in in the graph between say, vertex 1 and between vertex 2 and vertex 3.}\\\textrm{Since DFS will always pick the smallest value, and continue until there are no possible}\\\textrm{way to move forward, vertex 3 will have a higher post number than anyone in vertex 2's treeline}\\\textrm{However, since we are confined to only u and v's that together create an edge, this behavior}\\\textrm{will not come into play. Instead, we can only consider where there is}\\
+\textrm{u, v that share an edge and are explored through DFS.}\\\\
+\textrm{Then, by the given information, } post(u) < post(v)\textrm{ which will look like } [_{?}  [_{?}  |\|	]_{u} ]_{v}\\
+\textrm{where the ?'s represent unknown pre values (a vertex with a lower pre number is the ancestor.}\\\textrm{ Then u have a lower pre number than v. Then formulation look like }[_{u}  [_{v}  |\|	]_{?} ]_{?}\\
+\textrm{However, backtracking after finding the n}^{th}\textrm{ element, since in order to backtrack to u, we need to first backtrack through v}\\
+\textrm{we have a contradiction, it must be the case that }[_{v}  [_{u}  |\|	]_{u} ]_{v}\\
+\textrm{which makes v and ancestor of u. \textbf{QED}} 
+
+\end{document}
