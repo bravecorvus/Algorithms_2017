@@ -1,0 +1,24 @@
+\documentclass[10pt,a4paper,oneside]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc} %use different encoding (copy from pdf is now possible}
+\usepackage{fullpage} %small margins
+\usepackage{color}
+\definecolor{light-gray}{gray}{0.85}
+\usepackage{listings} %sourcecode
+\lstset{
+    numbers=left,
+    breaklines=true,
+    backgroundcolor=\color{light-gray},
+    tabsize=2,
+    basicstyle=\ttfamily,
+}
+\begin{document}\title{3.18}\author{Andrew Lee}\maketitle{}
+\textrm{You are given a binary tree }T = (V, E ) \textrm{(in adjacency list format), along with a designated root node }r \in V\textrm{. Recall that }u \textrm{ is said to be an ancestor of }v\textrm{ in the rooted tree, if the path from }r \textrm{ to } v \in \textrm{ T passes through }u\textrm{.}\\\\
+\textrm{You wish to preprocess the tree so that queries of the form ``is u an ancestor of v?'' can be answered}\\\textrm{in constant time. The preprocessing itself should take linear time. How can this be done?}\\\\\\
+\textrm{Doing a depth first search on the tree, starting with some root, we record the pre and post numbers}\\\textrm{of every vertex on the graph. Then, we can say definitively that u is the ancestor of v if }\\pre(u) < pre(v) < post(v) < post(u)\textrm{.}
+
+\end{document}

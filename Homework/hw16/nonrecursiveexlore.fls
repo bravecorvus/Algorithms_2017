@@ -1,0 +1,6 @@
+PWD /Users/andrewlee/Documents/School/Spring2017/Algorithms/Homework/hw16
+INPUT /usr/local/texlive/2016/texmf.cnf
+INPUT /usr/local/texlive/2016/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2016/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/andrewlee/Documents/School/Spring2017/Algorithms/Homework/hw16/nonrecursiveexlore.cpp
+OUTPUT /Users/andrewlee/Documents/School/Spring2017/Algorithms/Homework/hw16/nonrecursiveexlore.log

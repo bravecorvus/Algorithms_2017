@@ -1,0 +1,30 @@
+\documentclass[10pt,a4paper,oneside]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc} %use different encoding (copy from pdf is now possible}
+\usepackage{fullpage} %small margins
+\usepackage{color}
+\definecolor{light-gray}{gray}{0.85}
+\usepackage{listings} %sourcecode
+\lstset{
+    numbers=left,
+    breaklines=true,
+    backgroundcolor=\color{light-gray},
+    tabsize=2,
+    basicstyle=\ttfamily,
+}
+\begin{document}\title{3.15}\author{Andrew Lee}\maketitle{}
+
+\textrm{ The police department in the city of Computopia has made all streets one-way.}\\\textrm{The mayor contends that there is still a way to drive legally from any}\\\textrm{intersection in the city to any other intersection, but the opposition is not}\\\textrm{convinced. A computer program is needed to determine whether the mayor is}\\\textrm{right. However, the city elections are coming up soon, and there is just enough}\\\textrm{time to run a linear-time algorithm.}\\\\\\
+\textrm{(a) Formulate this problem graph-theoretically, and explain why it can}\\\textrm{indeed be solved in linear time}\\\\
+\textrm{Let all the intersections be the vertices of this graph, and let the valid \\legal paths between two intersections directed edges}\\\textrm{Then we can solve this as a graph problem using a customized search algorithm.}\\\textrm{What we will use is modified depth-first search. With the following steps:}\\\\
+\textrm{I)	Artibrarily pick any intersection, and follow one the set of edges that go in a ``similar direction''}\\\textrm{until you can go no further}\\
+\textrm{II) Then that intersection where one can no longer go any further must be within the perimeter of the city edge circuit. (The city edge circuit is the abstracted term that refers to the all the vertices that do no have 2 inpoints and 2 outpoints)}\\
+\textrm{III) Following a similar search pattern as (I), just look for vertices that have less than 1 outpoints along the perimeter. As soon as there is an edge with 0 outpoints, that means that that vertex is a sink in the graph. From a sink, you cannot legally go to any other vertex on the graph, and hence, the mayor is lying.}\\\\
+\textrm{This algorithm will always work for all scenarios with 4 or more vertices because it can take any artbitrary vertex to start because all it needs to do is to follow the path to the city perimeter, and to follow all edges in the same direction until you reach a sink.}
+\\\\\textrm{This algorithm will run in linear time }\let\to\rightarrow\textrm{ Let }n=\textrm{the number of vertices in the city.}\\\textrm{Then the best case scenario for the algorithm to find an edge from an arbitrarily picked edge is}\\n\textrm{ since if all the vertices are laid out in a one straight line, then it will be an}\\\textrm{nx1 graph. Starting from one end to the other, we will traverse all points before we can traverse no longer, but at this point, we know that the vertex will be a sink. For the average case that the city is roughly symmetrical, then the the time would take about } \sqrt[2]{n}\textrm{. The time it would take to traverse all edges would take roughly speaking }4*\sqrt[2]{n}\\\textrm{ steps assuming the area is about } \sqrt[2]{n}*\sqrt[2]{n}\textrm{. Hence, in theory, this algorithm on average will take about } 4*\sqrt[2]{n}+\sqrt[2]{n}\textrm{ steps which is a root function, which is }=O(n).}\\\\
+\textrm{(b) Then, the only difference with the above algorithm is that instead of picking an arbitrary vertex, we pick the town hall (which can either be an intersection or an edge, but for clarity's sake, we will define the town hall as a specific edge between two points, and the outbounding vertex to that edge will represent the stopping case such that we succeed. Then the stopping case for failure will be to reach the same sink using the same algorithm of getting to the city perimeter, and following the perimeter until you hit a vertex with no outbound edges.}\\\textrm{The problem can be solved in at most linear time for the same reason as the above.}
+\end{document}

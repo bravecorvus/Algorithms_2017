@@ -1,0 +1,26 @@
+\documentclass[10pt,a4paper,oneside]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc} %use different encoding (copy from pdf is now possible}
+\usepackage{fullpage} %small margins
+\usepackage{color}
+\definecolor{light-gray}{gray}{0.85}
+\usepackage{listings} %sourcecode
+\lstset{
+    numbers=left,
+    breaklines=true,
+    backgroundcolor=\color{light-gray},
+    tabsize=2,
+    basicstyle=\ttfamily,
+}
+\begin{document}\title{3.23}\author{Andrew Lee}\maketitle{}
+
+\textrm{Give an efficient algorithm that takes as input a directed acyclic graph}\\G = (V, E), \textrm{ and two vertices}s,t \in V,\textrm{ and outputs the number of different}\\\textrm{ directed paths from s to t in G .}
+
+\lstinputlisting[tabsize=2]{paths.py}
+
+\textrm{Uses a modified DFS to accomplish the task. Hence, }T(n) = \bigodot(n)\textrm{.}
+\end{document}
