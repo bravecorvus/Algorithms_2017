@@ -31,7 +31,7 @@
 *.exe
 *.out
 *.app
-/Textbooks/
-/fuse/
-/MidtermReview/
-/Projects/
+/Textbooks/*
+/fuse/*
+/MidtermReview/*
+/Projects/*
